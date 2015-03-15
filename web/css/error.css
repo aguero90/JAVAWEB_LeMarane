@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Laila';
+    src: url(../font/Laila-Regular.ttf) format('truetype');
+}
+
+#errorContainer{
+    text-align: center;
+    font-family: Laila;
+}
+
+#errorContainer div{
+    margin-top: 50px;
+}
+
+#errorContainer div a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #1695A3;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+}
+
+#errorContainer div a:hover{
+    color: #EB7F00;
+}
+
+#errorContainer h1{
+    color: #cc0000;
+    font-size: 50px;
+}
+
+#errorContainer p{
+    font-size: 20px;
+}

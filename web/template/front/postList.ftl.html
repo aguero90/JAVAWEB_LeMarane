@@ -1,0 +1,30 @@
+
+<div id="postListContainer">
+
+    <#if (posts?size > 0)>
+    <#list posts as p>
+    <div class="post columns row">
+        <header class="row">
+            <p>${strip_slashes(p.title)?html}</p>
+        </header>
+        <div class="body row">
+            <p>
+                <#list strip_slashes(p.text)?word_list as word>
+                <!-- trasformiamo il testo in una lista di parole e stampiamo solo le prime 50 parole -->
+                <#if word_index < 50>
+                ${word?html}
+                </#if>
+                </#list>
+                ...
+            </p>
+        </div>
+        <footer class="row">
+            <p class="left">${strip_slashes(p.admin.username)?html}</p>
+            <p class="right">${(p.date)?string("dd/MM/yyyy HH:mm")}</p>
+        </footer>
+    </div>
+    </#list>
+    </#if>
+
+</div>
+

@@ -1,0 +1,74 @@
+/* VARIABILI
+=============================================================================================== */
+/* colori palette */
+/* rgba(137, 174, 101, 1) */
+/* rgba(244, 228, 132, 1) */
+/* rgba(243, 162, 89, 1) */
+/* rgba(91, 140, 122, 1) */
+/* rgba(184, 74, 83, 1) */
+/* MIXINS
+=============================================================================================== */
+/* REGOLE DI STILE
+=============================================================================================== 
+=============================================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 100%; }
+
+h1 {
+  color: #B84A53;
+  font-size: 1.5rem; }
+
+/* OUTLINE HEADER
+=============================================================================================== */
+#outlineHeader {
+  height: 200px;
+  background-color: #222222;
+  color: #FFFFFF; }
+
+/* OUTLINE BODY
+=============================================================================================== */
+/* OUTLINE FOOTER
+=============================================================================================== */
+#outlineFooter {
+  height: 200px;
+  background-color: #222222;
+  margin-bottom: 0;
+  color: #FFFFFF; }
+
+/* POST LIST
+=============================================================================================== */
+#postListContainer .post {
+  width: 23%;
+  border: 1px solid red;
+  text-align: center;
+  padding: 5px; }
+  #postListContainer .post header {
+    color: green; }
+  #postListContainer .post footer {
+    color: #999999; }
+    #postListContainer .post footer .left {
+      float: left; }
+    #postListContainer .post footer .right {
+      float: right; }
+
+/*# sourceMappingURL=myStyle.css.map */

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- Per non riscrivere ogni volta la stringa -->
+    <context-param>
+        <param-name>data.source</param-name>
+        <param-value>java:comp/env/jdbc/SitoMarane</param-value>
+    </context-param>
+    <!-- Per rendere il Connection Pooling globale -->
+    <context-param>
+        <param-name>view.date_format</param-name>
+        <param-value>dd/MM/yyyy hh:mm:ss</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.debug</param-name>
+        <param-value>true</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.template_directory</param-name>
+        <param-value>template</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.data.author</param-name>
+        <param-value>M &amp; A</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.outline_template</param-name>
+        <param-value>outline.ftl.html</param-value>
+    </context-param>
+    <context-param>
+        <param-name>view.error_template</param-name>
+        <param-value>error.ftl.html</param-value>
+    </context-param>
+    <listener>
+        <listener-class>it.LeMarane.listener.ContextInitializer</listener-class>
+    </listener>
+    <!-- Qui iniziamo a "dichiarare" le Servlet -->
+    <!-- Qui "mappiamo" le servlet -->
+    <servlet>
+        <servlet-name>PostList</servlet-name>
+        <servlet-class>it.LeMarane.Controller.front.PostList</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostCard</servlet-name>
+        <servlet-class>it.LeMarane.Controller.front.PostCard</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImageGallery</servlet-name>
+        <servlet-class>it.LeMarane.Controller.front.ImageGallery</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ImageManagement</servlet-name>
+        <servlet-class>it.LeMarane.Controller.back.ImageManagement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostImagemanagement</servlet-name>
+        <servlet-class>it.LeMarane.Controller.back.PostImageManagement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminMenagement</servlet-name>
+        <servlet-class>it.LeMarane.Controller.back.AdminManagement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostManagement</servlet-name>
+        <servlet-class>it.LeMarane.Controller.back.PostManagement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogIn</servlet-name>
+        <servlet-class>it.LeMarane.Controller.front.LogIn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PostList</servlet-name>
+        <url-pattern>/ListaPost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostCard</servlet-name>
+        <url-pattern>/SchedaPost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageGallery</servlet-name>
+        <url-pattern>/Galleria</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminMenagement</servlet-name>
+        <url-pattern>/GestioneAdmin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageManagement</servlet-name>
+        <url-pattern>/GestisciImmagini</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostImagemanagement</servlet-name>
+        <url-pattern>/GestisciPostImmagine</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostManagement</servlet-name>
+        <url-pattern>/GestisciPost</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogIn</servlet-name>
+        <url-pattern>/LogIn</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!-- Qui dichiariamo quale deve essere il file da cui parte il progetto -->
+    <!-- Cioè il primo file caricato -->
+    <welcome-file-list>
+        <welcome-file>ListaPost</welcome-file>
+    </welcome-file-list>
+    <!-- Qui inseriamo il riferimento alla risorsa (vedi il tag <Resource> del context.xml in "META-INF")  -->
+    <resource-ref>
+        <res-ref-name>jdbc/SitoMarane</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+</web-app>

@@ -1,0 +1,142 @@
+/* VARIABILI
+=============================================================================================== */
+
+/* colori palette */
+$green: #89AE65; /* rgba(137, 174, 101, 1) */
+$yellow: #F4E484; /* rgba(244, 228, 132, 1) */
+$orange: #F3A259; /* rgba(243, 162, 89, 1) */
+$blue: #5B8C7A; /* rgba(91, 140, 122, 1) */
+$red: #B84A53; /* rgba(184, 74, 83, 1) */
+
+$primaryTextColor: #444444;
+$secondaryTextColor: #999999;
+
+
+/* MIXINS
+=============================================================================================== */
+@mixin transition($property, $time){
+    transition: $property $time ease-in-out;
+    -webkit-transition: $property $time ease-in-out;
+    -moz-transition: $property $time ease-in-out;
+    -o-transition: $property $time ease-in-out;
+}
+
+@mixin transform($string){
+    -webkit-transform: $string;
+    -moz-transform: $string;
+    transform: $string;
+}
+
+@mixin borderRadius($value){
+    border-radius: $value;
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+}
+
+@mixin boxShadow($x, $y, $blur, $color){
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+}
+
+@mixin animation($name, $time, $timingFunction, $delay, $count, $direction){
+    -moz-animation: $name $time $timingFunction $delay $count $direction;
+    -webkit-animation: $name $time $timingFunction $delay $count $direction;
+    animation: $name $time $timingFunction $delay $count $direction;
+}
+
+/* REGOLE DI STILE
+=============================================================================================== 
+=============================================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, textarea{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body{
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+}
+
+h1{
+    color: $red;
+    font-size: 1.5rem;
+}
+
+/* OUTLINE HEADER
+=============================================================================================== */
+#outlineHeader{
+    height: 200px;
+    background-color: #222222;
+    color: #FFFFFF;
+}
+
+
+/* OUTLINE BODY
+=============================================================================================== */
+body{
+
+}
+
+
+/* OUTLINE FOOTER
+=============================================================================================== */
+#outlineFooter{
+    height: 200px;
+    background-color: #222222;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+/* POST LIST
+=============================================================================================== */
+#postListContainer{
+
+    .post{
+        width: 23%;
+        border: 1px solid red;
+        text-align: center;
+        padding: 5px;
+
+        header{
+            color: green;
+        }
+
+        .body{
+
+        }
+
+        footer{
+            color: $secondaryTextColor;
+
+            .left{
+                float: left;
+            }
+
+            .right{
+                float: right;
+            }
+
+        }
+
+    }
+}
+
+
+
+

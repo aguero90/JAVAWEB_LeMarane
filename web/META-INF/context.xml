@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/JAVAWEB_LeMarane">
+    <!-- prima di insreire la Resource bisogna inserire il dirver di mySQL nella cartella CATALINA_HOME/lib -->
+    <!-- name deve essere "jdbc/nome_scelto_da_te" -->
+    <!-- type deve essere sempre "javax.sql.DataSource (ovviamente per DB MySQL)" -->
+    <!-- auth deve essere "container" perché sì xD -->
+    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxActive="10" maxIdle="5" maxWait="10000" name="jdbc/SitoMarane" password="" type="javax.sql.DataSource" url="jdbc:mysql://localhost/marane" username="root"/>
+</Context>
